@@ -1,71 +1,94 @@
-# lavalamp README
+# VS Code Lava Lamp Extension
 
-This is the README for your extension "lavalamp". After writing up a brief description, we recommend including the following sections.
+## Description
 
-## Features
+This repository contains a VS Code extension named "Lava Lamp". The extension provides the following features:
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+1. **Lava Lamp Webview**: A webview demonstrating a "lava lamp" animation with configurable controls.
+2. **Commands**: Several commands such as showing a "Hello World" message, launching an external URL, and displaying the lava lamp animation in a webview.
+3. **Tree View**: An example tree view provider (currently showing an empty view).
 
-For example if there is an image subfolder under your extension project workspace:
+## Files in the Repository
 
-\!\[feature X\]\(images/feature-x.png\)
+* `.eslintrc.json` - Configuration for ESLint.
+* `.gitattributes` - Git attributes configuration.
+* `.gitignore` - Specifies files and directories to be ignored by git.
+* `.vscodeignore` - Specifies files to be ignored during publishing of the extension.
+* `CHANGELOG.md` - A log of changes made to the extension.
+* `package-lock.json` - Automatically generated for any operations where npm modifies either the node_modules tree or package.json.
+* `package.json` - This is the manifest file that declares the extension and its commands.
+* `tsconfig.json` - TypeScript configuration file.
+* `vsc-extension-quickstart.md` - Quick start guide for setting up and running the extension.
+* `src/extension.ts` - The main file where the implementation of the extension commands resides.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Installation and Setup
 
-## Requirements
+To set up and run this extension locally, follow these steps:
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+1. **Clone the repository**:
+    ```
+    git clone <repository-url>
+    ```
 
-## Extension Settings
+2. **Install the dependencies**:
+    ```
+    npm install
+    ```
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+3. **Open the extension in VS Code**:
+    ```
+    code .
+    ```
 
-For example:
+4. **Run the extension**:
+    - Press `F5` to open a new window with the extension loaded.
+    - Run your command from the command palette by pressing (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac) and typing `Hello World`.
 
-This extension contributes the following settings:
+## Commands
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+The extension provides the following commands:
 
-## Known Issues
+1. **`lavalamp.hello`**: Displays a "Hello World" message.
+2. **`lavalamp.launch`**: Launches an external URL (`https://crbn.us/lava.html`).
+3. **`lavalamp.show`**: Opens a webview that displays the lava lamp animation.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Lava Lamp Webview
 
-## Release Notes
+The lava lamp animation is configurable through various controls:
 
-Users appreciate release notes as you update your extension.
+- Number of blobs.
+- Speed of blobs.
+- Size of blobs.
+- Option to use color with customizable color variance.
 
-### 1.0.0
+## Development
 
-Initial release of ...
+To make changes to the extension code:
 
-### 1.0.1
+1. Edit the code in `src/extension.ts`.
+2. Relaunch the extension from the debug toolbar after making changes.
+3. Reload the VS Code window to load your changes (`Ctrl+R` or `Cmd+R` on Mac).
 
-Fixed issue #.
+## API Reference
 
-### 1.1.0
+You can explore the full set of VS Code API by opening the file `node_modules/@types/vscode/index.d.ts`.
 
-Added features X, Y, and Z.
+## Running Tests
 
----
+To run tests:
 
-## Following extension guidelines
+1. Open the debug viewlet (`Ctrl+Shift+D` or `Cmd+Shift+D` on Mac).
+2. From the launch configuration dropdown, pick `Extension Tests`.
+3. Press `F5` to run the tests in a new window with the extension loaded.
+4. See the output of the test result in the debug console.
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+## Additional Resources
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+- [UX guidelines](https://code.visualstudio.com/api/ux-guidelines/overview) for creating extensions that integrate with VS Code's interface.
+- [Bundling your extension](https://code.visualstudio.com/api/working-with-extensions/bundling-extension) to reduce size and improve startup time.
+- [Publishing your extension](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) on the VS Code extension marketplace.
+- [Continuous Integration](https://code.visualstudio.com/api/working-with-extensions/continuous-integration) for automating builds.
 
-## Working with Markdown
+## License
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+[Specify your license here]
